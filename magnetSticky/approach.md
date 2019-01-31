@@ -18,7 +18,7 @@ For example, a classical questions in Stack overflow has three tags like \<java\
 ### **Sticky**
 *Sticky topics are those where a large proportion of the users will keep participating in discussion in the time period under research and the following. Thus, we calculate the stickiness of a topic as the proportion of the users who discuss within the topic in the time period under research to who have also discuss in the following time period.*
 
-
+**Figure 1 here**
 
 Let us take the survey of magnet and sticky of some topics belong to a major category as a exmaple . There are 6 questions (a,b, c, d, e, f) and 7 users (A, B, C, D, E, F, G), *the Last Activity Date of question a, b, c is during 2017 and question d ,e, f is during 2018. the register date of user A, B, C, D is during 2017 and  the register date of user E, F, G is during 2018.*
 
@@ -27,3 +27,10 @@ Questions have different tags. We merge tags belonging to the same topic into on
 To calculate the magnet metric, we observe that there are four new users who register his/her account in 2017  (A, B, C and D), and all of them discuss in topic 1, while two users (BC) discuss in topic 2 and two users participate in the disccusion of topic 3. In this case, Magnet value of topic 1 in 2017 is 4/4 , topic 2 is 2/4 and topic is 2/4. 
 
 To calculate the sticky metric, on topic 1, there are three users participate in the discussion in 2017 (A, B and C) but only one of them also  participate in the discussion in 2018 (A). Hence, the sticky value of project 1 is 1/4 . on topic 2, there are 2 users participate in the discussion in 2017 (B and C) but only one of them also  participate in the discussion in 2018 (B). Even though new users E F G participate in the discussion in 2018, we still calculate the value of sticky as 1/2 .For the same reason, the sticky of topic 3 is 2/2 in 2018
+
+# 3 Database
+In this paper, we anlyze the Stack Overflow dataset provided by [Sebastian Baltes ->SOTorrent: Reconstructing and Analyzing the Evolution of Stack Overflow Posts.] called SOTorrent. 
+SOTorrent is *an open dataset based on the official SO data dump. SOTorrent provides access to the version history of SO content at the level of whole posts and individual text or code blocks. It connects SO posts to other platforms by aggregating URLs from text blocks and by collecting references from GitHub files to SO posts.*
+The dataset includes 20 different table which store not only data from official SO data dump but also data extracted from original data dump.
+however , in this paper , we only anlyze the data from table "Posts" which includes about 42 million posts from Stack overflow and table "Users" where there are about 9 million rows of user information and pay attation to user , tag and time informaiton of questions
+In this paper, we consider a user to be one who ask or answer questions in Stack Overflow, Those who comment or like/unlike on questions or answers are not counted in the statistics.
