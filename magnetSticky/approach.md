@@ -34,3 +34,10 @@ SOTorrent is *an open dataset based on the official SO data dump. SOTorrent prov
 The dataset includes 20 different table which store not only data from official SO data dump but also data extracted from original data dump.
 however , in this paper , we only anlyze the data from table "Posts" which includes about 42 million posts from Stack overflow and table "Users" where there are about 9 million rows of user information and pay attation to user , tag and time informaiton of questions
 In this paper, we consider a user to be one who ask or answer questions in Stack Overflow, Those who comment or like/unlike on questions or answers are not counted in the statistics.
+
+# 5 Conclusion
+Whether it's a programming language or a program framework or an operating system, keeping the community alive and attracting more people to participate in discussions is critical to its development.Especially on the stack overflow, the world's largest program Q&A platform, having more questions and answers on a topic means that customers of the product are more likely to solve their own problems, which is even more tedious than that developers rack their brains to write a lengthy development document or Q&A
+This paper applied the magnet and sticky population concepts to a set of topics in Stack Overflow. We find that:
+1. The number of topics that people participate in is exploding with the development and popularity of computer technology.Even the most popular themes can't attract the high percentage of people involved in the discussion like what they did ten years ago.
+2. Under their respective major categories, the most popular topics are still very popular after ten years, and only a small number of languages or frameworks can stand out and become one of the most popular topics.
+3. This research can provide some reference for enterprises to choose their own main technology stack, and can also be used as a reference for computer science students to learn new technologies, because it (1)predicts the trend of computer technology in the next few years, (2)points out which technologies are easier to access and the questions can be easier to get answers to.
