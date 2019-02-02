@@ -2,25 +2,25 @@
 
 Measuring Contributor Retention and Attraction in Questions of Stack Cverflow
 
-This section describes how we measure the appeal and adhesion of users on different topics on Stack Overflow.In this study, we use the Magnet and Sticky metrics defined by the Pew Research Center [26] for illustrating the migratory trends of citizens in the United States.
+This section describes how we measure the appeal and adhesion of users who participate in disssion of different topics on Stack Overflow.In this study, we use the Magnet and Sticky metrics defined by the Pew Research Center [26] for illustrating the migratory trends of citizens in the United States.
 
-*The Pew Research Center report1 defines magnet states as those states where a large proportion of adults who live there have moved from another state. Thus, the magnet metric for a state is the proportion of adult residents of a state who were not born in the state. Furthermore, the report also defines sticky states as those states where a large proportion of adults who were born there continue to live there. Thus, the sticky metric for a state is the proportion of adult residents who were born in the state*
+The Pew Research Center report defines magnet state as a state that the majority of residents living in the state are not born in this state. Thus, the magnet metric for a state is the proportion of adult residents of a state who were not born in the state. Additionally, the report also defines the sticky state as a state that the majority of the state’s adult residents were born and have been living in the state. Thus, the sticky metric for a state is the proportion of adult residents who were born in the state
 
-*These definitions are sound for a study of populations, where a single adult can only occupy one state at a time.However, the definition cannot be applied directly to **the topics discussed by the users of Stack Overflow** where **a user can ask or answer questions in several topics at the same time. **Therefore, we expand original definition to apply to **topics in Stack Overflow** as follows:*
+These definitions are sound for a study of populations, where a single adult can only occupy one state at a time. However, the definition cannot be applied directly to the topics discussed by the users of Stack Overflow where a user can ask or answer questions in several topics at the same time. Therefore, we expand original definition to apply to topics in Stack Overflow as follows:*
 
 ### **Topics discussed in Stack Overflow**
 Questions in Stack Overflow are composed of the content of the question, answers to the question and comments ,which are call Posts in the database of SOtenent. Each question have one or more tags that separate the question into different topics. Simultaneously, Posts in a qustion have their own creater (For the content of question, one is the questioner, and for the answer, one is the respondent.)who is participant of the topics of the question.we also define the acitivity of asking or answering questions in some topic as disscussion of the topic
 For example, a classical questions in Stack overflow has three tags like \<java\>, apache and linux which is asked by user A and answered by user B, and C, so A ,B and C are  participants of topic java apache and linux, by the way , We will discuss the participation of specific topics in several major categories(e.g C++ and program language), so the three topics java apache and linux are also belong to  major categories Program language , Framework and OS.
 
 ### **Magnet**
-*Magnets are those that attract a large proportion of new users. Thus, we calculate the magnetism of a topic as the proportion of users who ask or answer during the time period under research to all new users who resigster their account at the year.*
+Magnets are those that attract a large proportion of new users. Thus, we calculate the magnetism of a topic as the proportion of users who ask or answer during the time period under research to all new users who resigster their account at the year.
 
 ### **Sticky**
-*Sticky topics are those where a large proportion of the users will keep participating in discussion in the time period under research and the following. Thus, we calculate the stickiness of a topic as the proportion of the users who discuss within the topic in the time period under research to who have also discuss in the following time period.*
+*Sticky topics are those where a large proportion of the users will keep participating in discussion in the time period under research and the following. Therefore, we calculate the stickiness of a topic as the proportion of the users who discuss within the topic in the time period under research to who have also discuss in the following time period.
 
 **Figure 1 here**
 
-Let us take the survey of magnet and sticky of some topics belong to a major category as a exmaple . There are 6 questions (a,b, c, d, e, f) and 7 users (A, B, C, D, E, F, G), *the Last Activity Date of question a, b, c is during 2017 and question d ,e, f is during 2018. the register date of user A, B, C, D is during 2017 and  the register date of user E, F, G is during 2018.*
+Let us take the survey of magnet and sticky of some topics belong to a major category as a exmaple . There are 6 questions (a,b, c, d, e, f) and 7 users (A, B, C, D, E, F, G), the Last Activity Date of question a, b, c is during 2017 and question d ,e, f is during 2018. the register date of user A, B, C, D is during 2017 and  the register date of user E, F, G is during 2018.
 
 Questions have different tags. We merge tags belonging to the same topic into one topic ,for example tag "python-2.7" and tag "python-3.6" are merged into topic "python". so we get 3 topics in this case.
 
@@ -30,7 +30,7 @@ To calculate the sticky metric, on topic 1, there are three users participate in
 
 # 3 Database
 In this paper, we anlyze the Stack Overflow dataset provided by [Sebastian Baltes ->SOTorrent: Reconstructing and Analyzing the Evolution of Stack Overflow Posts.] called SOTorrent. 
-SOTorrent is *an open dataset based on the official SO data dump. SOTorrent provides access to the version history of SO content at the level of whole posts and individual text or code blocks. It connects SO posts to other platforms by aggregating URLs from text blocks and by collecting references from GitHub files to SO posts.*
+SOTorrent is “an open dataset based on the official SO data dump. SOTorrent provides access to the version history of SO content at the level of whole posts and individual text or code blocks. It connects SO posts to other platforms by aggregating URLs from text blocks and by collecting references from GitHub files to SO posts.”
 The dataset includes 20 different table which store not only data from official SO data dump but also data extracted from original data dump.
 however , in this paper , we only anlyze the data from table "Posts" which includes about 42 million posts from Stack overflow and table "Users" where there are about 9 million rows of user information and pay attation to user , tag and time informaiton of questions
 In this paper, we consider a user to be one who ask or answer questions in Stack Overflow, Those who comment or like/unlike on questions or answers are not counted in the statistics.
