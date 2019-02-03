@@ -7,6 +7,7 @@
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{textcomp}
 \usepackage[dvipdfmx]{xcolor}
+\usepackage{framed}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -20,9 +21,14 @@
 Stack Overflow (SO) is one of the most popular question and answer website among engineers. There are many tags in Stack Overflow, and with the tag, you can find the questions of your interest smoothly. Many questions and answers are received every day for Stack Overflow. We explored how their interest shifted from how they use tags. We classified tags into four types: (1) attractive, (2) stagnant, (3) fluctuating, and (4) terminal based on magnet values and sticky values. Analysis of stack overflow revealed that: 
 (1) There were some historical events when there were characteristics in the transition of magnet value and sticky value.
 (2) Since the total number of users of stack overflow increases year by year, the graphs of magnet value and sticky value fall to the right, but if they are normalized, the sticky value of the tag is relatively outputted and a new viewpoint is revealed.
-(3) In quadrant transitions, tags often remain in the same quadrant~\cite{yamashita2014magnet}.
+(3) In quadrant transitions, tags often remain in the same quadrant~\cite{yamashita2014magnet}.\\
 
 \end{abstract}
+
+\begin{IEEEkeywords}
+magnet, sticky, tag, user migration, OSS census
+\end{IEEEkeywords}
+
 
 \section{Introduction}
 Pew Research Center~\cite{communityeconomic}, an organization that studies problems in the United States and the world, investigated society and population using US tax survey data.  States that have a high percentage of people migrating from the outside are defined as \emph{magnet states} and states where the high proportion of the population who continues to live in the same state since birth are defined as \emph{sticky states}. For example, 86\% of Nevada's population migrated from other states so Nevada state is quite "magnet". Through such a survey, you can find the tendency how American citizens move.
@@ -34,6 +40,7 @@ For many engineers, it is important to know the changes in the interests of othe
 
 \textbf{(RQ1) What are typical values of magnet and sticky in Stack Overflow?}\par
 In many cases, the sticky value tended to be higher than the magnet value. In addition, the decrease rate was higher for the magnet value than for the sticky value. Among them, the sticky value of swift and go rose.
+\smallskip
 
 \textbf{(RQ2) How do magnet and sticky values change over the time?}\par
 In our research we can identify which tags are obsolete. When the tags move quadrant, we find that something happen.
@@ -47,15 +54,18 @@ The Pew Research Center report1 defines magnet states as those states where a la
 
 *These definitions are sound for a study of populations, where a single adult can only occupy one state at a time. However, the definition cannot be applied directly to the topics discussed by the users of Stack Overflow where **a user can ask or answer questions in several topics at the same time. *Therefore, we expand original definition to apply to topics in Stack Overflow as follows:
 
-\medskip
+\smallskip
 \subsection*{\textit{\textbf{Topics discussed in Stack Overflow}}}
 
 Questions in Stack Overflow are composed of the content of the question, answers to the questions and comments~\cite{liu2018mining}, that are call Posts in the database of SOTorrent. Each question has one or more tags that separate the question into different topics. Simultaneously, posts in a question have their own creater (for the content of question, one is the questioner, and for the answer, one is the respondent) who is participant of the topics of the question. We also define the activity of asking or answering questions in some topic as discussion of the topic. For example, a classical questions in Stack overflow has three tags like <java>, apache and linux which is asked by user A and answered by user B, and C, so A ,B and C are participants of topic java apache and linux, by the way , We will discuss the participation of specific topics in several major categories(e.g C++ and program language), so the three topics java apache and linux are also belong to major categories Program language , Framework and OS.
+\smallskip
 
-\subsection*{Magnet}
+\textbf{Magnet}
 Magnets are those that attract a large proportion of new users. Thus, we calculate the magnetism of a topic as the proportion of users who ask or answer during the time period under research to all new users who registered their account at the year.
+\smallskip
+\smallskip
 
-\subsection*{Sticky}
+\textbf{Sticky}
 Sticky topics are those where a large proportion of the users will keep participating in discussion in the time period under research and the following. Thus, we calculate the stickiness of a topic as the proportion of the users who discuss within the topic in the time period under research to who have also discuss in the following time period.
 
 \begin{figure}[t]
@@ -64,7 +74,8 @@ Sticky topics are those where a large proportion of the users will keep particip
  \caption{example graph} 
  \label{fig:example1} 
 \end{figure}
-
+\smallskip
+\smallskip
 
 Let us take the survey of magnet and sticky of some topics belong to a major category as a example. There are 6 questions (a, b, c, d, e, f) and 7 users (A, B, C, D, E, F, G), the Last Activity Date of question a, b, c is during 2017 and question d ,e, f is during 2018. the register date of user A, B, C, D is during 2017 and the register date of user E, F, G is during 2018~\cite{yamashita2016magnet}.
 
@@ -77,17 +88,23 @@ To calculate the sticky metric, on topic 1, there are three users participate in
 
 \section{STUDY RESULTS} %paragraph4
 We got research results and faced two questions against these results. We discuss the questions based on the results.
+\smallskip
+\smallskip
 
 \textbf{(RQ1) What are typical values of magnet and sticky in OSS?}
+\smallskip
 
 We have calculated magnet and sticky values as defined in section 2. And we plotted the magnet value on the vertical axis and the sticky value on the horizontal axis. We classified the plotted points into 4 quadrants.
-
 \smallskip
+\smallskip
+
 \textbf{Attractive:} Tag with high magnet and sticky value. By knowing attractive tags, we can find out what the engineers are interested in.\\
 \textbf{Fluctuating:} Tagwith high magnet and low sticky value. This tag attracts people but it is short-term. Excellent engineers will not continue to be interested.\\
 \textbf{Stagnant:} Tag with low magnet and high sticky value. These tags are difficult to attract new users, but maintain existing users.\\
-\textbf{Terminal:} Tag with Low magnet and low sticky value. This tag can neither attract new users' engineers nor keep them interested.\\
+\textbf{Terminal:} Tag with Low magnet and low sticky value. This tag can neither attract new users' engineers nor keep them interested.
 \smallskip
+\smallskip
+
 In this paper, the median of magnet and sticky values for each year is used for the threshold of the quadrant because the median value is not much affected by outliers. As we showed the sticky value definition in section 2, the sticky value depends on the number of tag users in that year and the following year. So in order to answer RQ1, we got 9 years' worth of sticky value from the information on the number of tag users from 2009 to 2018. The sticky value must depend on the number of new tag users but if the number of new tag users in the target year is too low, the sticky value will be too small. Therefore, in order to remove noise, we decided thresholds for each topic, and we set them all below zero. 
 \medskip
 
@@ -100,18 +117,16 @@ In this paper, the median of magnet and sticky values for each year is used for 
 
 \textbf{Quantitive results:}
 Figure\ref{fig:plotframe2010} is the magnet vs sticky value quadrant plots of the 2010 framework tag. It shows that there are points with extreme magnet and sticky values. The attractive tags are in the first quadrant, the stagnant tags are in the second quadrant, the fluctuating tags are in the third quadrant, and the terminal tags are in the fourth quadrant. From the figure, it can be seen that the value of magnet is considerably lower than the value of sticky. In other words, tags used for stack overflow are generally sticky instead of magnet. This also applies to the investigation of the Pew Research Center mentioned earlier. Engineers tend to continue to develop using the tags of the same content so that those who continue living on the same land rather than citizens living in the same place will be able to spend more time. 
+\smallskip
+\smallskip
 
 \textbf{Manual analysis:}
 From the figure\ref{fig:plotframe2010} .NET is high sticky and magnet value. It can be said that it is very good to be a high magnet and sticky value. The .NET Framework was published by Microsoft in November 2006. This is the foundation system for building applications on the network.  Microsoft .NET aims to connect all digital information equipment to the network, as well as electronic equipment such as personal computers, servers, mobile phones, smart phones, home appliances, etc. and to be accessible anytime via the Internet. It is the .NET Framework that framed it using the .NET environment. On this framework, it is possible to develop and execute software supporting the .NET environment. The reason why the .NET magnet value is high is beginner engineers can develop somewhat advanced software. The reason why .NET's sticky value is high is its convenience.
 \medskip
  
-% \usepackage{ascmac}
-
-% \begin{document}
-%   \begin{screen}
+\begin{oframed}
  \emph{Sticky is a more general attribute than magnet. Tags with high magnet value are easy to use even for beginners. Especially magnet tags like .NET are relatively easy to use, so it is widely used for beginners and others. Machine learning gradually became fashionable around 2015 and as it is now, sticky values such as machine learning library like torch are high.}
-%   \end{screen}
-% \end{document}
+\end{oframed}
 \medskip
 
 
@@ -131,32 +146,32 @@ From the figure\ref{fig:plotframe2010} .NET is high sticky and magnet value. It 
 
 
 \textbf{(RQ2) How do magnet and sticky values change over time?} \\
+\smallskip\smallskip
 \textbf{Approach:}
 We investigated how the tags move with time over the quadrants of Figure\ref{fig:langtrans2018}. \\
 \textbf{Quantitive results:}
 Figure\ref{fig:langtrans2018} shows the quadrant transition likelihood using the state transition diagram. The values ​​on the arrows indicate the possibility of transition from each quadrant to quadrant. For example, Figure 3 shows that 25\% of programming language tags moved from Stagnant to Attractive from 2017 to 2018. We use * to represent year of less than 100 users of tags.
-From the figure\ref{fig:langtrans2018}, you can see that only Stagnant tags moves to Terminal. Fluctuating that attracts new people even if there are at least a few long-term users has a possibility of transitioning to Attractive, but Stagnant that many people are using for many years cannot tie up in trends and no one can use. Also, you can see that all tags often stay in the same quadrant. Tags that were Attractive in 2017 remain Attractive for 2018, and Stagnant or Fluctuating tags become popular and sometimes become Attractive tags.\\
-\medskip
+From the figure\ref{fig:langtrans2018}, you can see that only Stagnant tags moves to Terminal. Fluctuating that attracts new people even if there are at least a few long-term users has a possibility of transitioning to Attractive, but Stagnant that many people are using for many years cannot tie up in trends and no one can use. Also, you can see that all tags often stay in the same quadrant. Tags that were Attractive in 2017 remain Attractive for 2018, and Stagnant or Fluctuating tags become popular and sometimes become Attractive tags.
+\smallskip\smallskip
 
 \textbf{Manual analysis:}
 Figure\ref{fig:LangQuadrant} shows the transition of the quadrant of each tags. From this figure, we can learn how tags move quadrants.
-As can be seen from figure\ref{fig:LangQuadrant}, the programming language tags often stay in the same quadrant. It turned out that tags frequently move between Attractive and Stagnant, Terminal and Flactuating.\\
-\medskip
+As can be seen from figure\ref{fig:LangQuadrant}, the programming language tags often stay in the same quadrant. It turned out that tags frequently move between Attractive and Stagnant, Terminal and Flactuating.
+\smallskip\smallskip
 
-
+\begin{oframed}
 \emph{As a result of investigating from 2009 to 2018, in the programming language, the average transition from Attractive to Attractive was 91.5\%, the transition from Fluctuating to Fluctuating was 77.8\%, the change from Stagnant to Stagnant was 80.6\%, and the change from Terminal to Terminal was 87.2\%.  In the programming language, it turned out that the classification of tags was difficult to change.}
-\medskip
-
+\end{oframed}
 
 \section{Conclusions}
 
 Whether it's a programming language or a program framework or an operating system, keeping the community alive and attracting more people to participate in discussions is critical to its development. Especially on the stack overflow, the world's largest program Q\&A platform, having more questions and answers on a topic means that customers of the product are more likely to solve their own problems, which is even more tedious than that developers rack their brains to write a lengthy development document or Q\&A This paper applied the magnet and sticky population concepts to a set of topics in Stack Overflow. We find that:
 
-1. The number of topics that people participate in is exploding with the development and popularity of computer technology. Even the most popular themes can't attract the high percentage of people involved in the discussion like what they did ten years ago.\\
-
+1. The number of topics that people participate in is exploding with the development and popularity of computer technology. Even the most popular themes can't attract the high percentage of people involved in the discussion like what they did ten years ago.
+\smallskip\smallskip
 
 2. Under their respective major categories, the most popular topics are still very popular after ten years, and only a small number of languages or frameworks can stand out and become one of the most popular topics.\\
-
+\smallskip\smallskip
 
 3. This research can provide some reference for enterprises to choose their own main technology stack, and can also be used as a reference for computer science students to learn new technologies, because it (1)predicts the trend of computer technology in the next few years, (2)points out which technologies are easier to access and the questions can be easier to get answers to.\\
 
