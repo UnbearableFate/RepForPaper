@@ -57,7 +57,7 @@ The Pew Research Center report1 defines magnet states as those states where a la
 \smallskip
 \subsection*{\textit{\textbf{Topics discussed in Stack Overflow}}}
 
-Questions in Stack Overflow are composed of the content of the question, answers to the questions and comments~\cite{liu2018mining}, that are call Posts in the database of SOTorrent. Each question has one or more tags that separate the question into different topics. Simultaneously, posts in a question have their own creater (for the content of question, one is the questioner, and for the answer, one is the respondent) who is participant of the topics of the question. We also define the activity of asking or answering questions in some topic as discussion of the topic. For example, a classical questions in Stack overflow has three tags like <java>, apache and linux which is asked by user A and answered by user B, and C, so A ,B and C are participants of topic java apache and linux, by the way , We will discuss the participation of specific topics in several major categories(e.g C++ and program language), so the three topics java apache and linux are also belong to major categories Program language , Framework and OS.
+Questions in Stack Overflow are composed of the content of the question, answers to the questions and comments~\cite{liu2018mining}, that are call Posts in the database of SOTorrent. Each question has one or more tags that separate the question into different topics. Simultaneously, posts in a question have their own creater (for the content of question, one is the questioner, and for the answer, one is the respondent) who is participant of the topics of the question. We also define the activity of asking or answering questions in some topic as discussion of the topic. For example, a classical questions in Stack overflow has three tags like java, apache and linux which is asked by user A and answered by user B, and C, so A, B and C are participants of topic java apache and linux, by the way, We will discuss the participation of specific topics in several major categories (e.g. C++ and program language), so the three topics java apache and linux are also belong to major categories Programing language, Framework, Environment and OS.
 \smallskip
 
 \textbf{Magnet}
@@ -77,7 +77,7 @@ Sticky topics are those where a large proportion of the users will keep particip
 \smallskip
 \smallskip
 
-Let us take the survey of magnet and sticky of some topics belong to a major category as a example. There are 6 questions (a, b, c, d, e, f) and 7 users (A, B, C, D, E, F, G), the Last Activity Date of question a, b, c is during 2017 and question d ,e, f is during 2018. the register date of user A, B, C, D is during 2017 and the register date of user E, F, G is during 2018~\cite{yamashita2016magnet}.
+Let us take the survey of magnet and sticky of some topics belong to a major category as a example. There are 6 questions (a, b, c, d, e, f) and 7 users (A, B, C, D, E, F, G), the Last Activity Date of question a, b, c is during 2017 and question d, e, f is during 2018. the register date of user A, B, C, D is during 2017 and the register date of user E, F, G is during 2018~\cite{yamashita2016magnet}.
 
 Questions have different tags. We merge tags belonging to the same topic into one topic,for example tag "python-2.7" and tag "python-3.6" are merged into topic "python". So we get 3 topics in this case.
 
@@ -85,6 +85,16 @@ To calculate the magnet metric, we observe that there are four new users who reg
 
 To calculate the sticky metric, on topic 1, there are three users participate in the discussion in 2017 (A, B and C) but only one of them also participate in the discussion in 2018 (A). Hence, the sticky value of project 1 is 1/4 . on topic 2, there are 2 users participate in the discussion in 2017 (B and C) but only one of them also participate in the discussion in 2018 (B). Even though new users E F G participate in the discussion in 2018, we still calculate the value of sticky as 1/2 .For the same reason, the sticky of topic 3 is 2/2 in {2018}
 
+\section{Dataset}
+In this paper, we anlyze the Stack Overflow dataset provided by [Sebastian Baltes -> SOTorrent: Reconstructing and Analyzing the Evolution of Stack Overflow Posts.] called SOTorrent. 
+
+SOTorrent is “an open dataset based on the official SO data dump. SOTorrent provides access to the version history of SO content at the level of whole posts and individual text or code blocks. It connects SO posts to other platforms by aggregating URLs from text blocks and by collecting references from GitHub files to SO posts.”
+
+The dataset includes 20 different table which store not only data from official SO data dump but also data extracted from original data dump.
+
+However , in this paper , we only anlyze the data from table "Posts" which includes about 42 million posts from Stack overflow and table "Users" where there are about 9 million rows of user information and pay attation to user , tag and time informaiton of questions
+
+In this paper, we consider a user to be one who ask or answer questions in Stack Overflow, Those who comment or like/unlike on questions or answers are not counted in the statistics.
 
 \section{STUDY RESULTS} %paragraph4
 We got research results and faced two questions against these results. We discuss the questions based on the results.
@@ -170,10 +180,10 @@ Whether it's a programming language or a program framework or an operating syste
 1. The number of topics that people participate in is exploding with the development and popularity of computer technology. Even the most popular themes can't attract the high percentage of people involved in the discussion like what they did ten years ago.
 \smallskip\smallskip
 
-2. Under their respective major categories, the most popular topics are still very popular after ten years, and only a small number of languages or frameworks can stand out and become one of the most popular topics.\\
+2. Under their respective major categories, the most popular topics are still very popular after ten years, and only a small number of languages or frameworks can stand out and become one of the most popular topics.
 \smallskip\smallskip
 
-3. This research can provide some reference for enterprises to choose their own main technology stack, and can also be used as a reference for computer science students to learn new technologies, because it (1)predicts the trend of computer technology in the next few years, (2)points out which technologies are easier to access and the questions can be easier to get answers to.\\
+3. This research can provide some reference for enterprises to choose their own main technology stack, and can also be used as a reference for computer science students to learn new technologies, because it (1) predicts the trend of computer technology in the next few years, (2) points out which technologies are easier to access and the questions can be easier to get answers to.\\
 
 
 % \begin{table}[htbp]
