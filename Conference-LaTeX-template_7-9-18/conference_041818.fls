@@ -114,12 +114,15 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+<<<<<<< HEAD
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/framed/framed.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/framed/framed.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+=======
+>>>>>>> d3de3e9da9d2cd845e0a83d64eba9028c9dfa1f4
 INPUT conference_041818.aux
 INPUT conference_041818.aux
 OUTPUT conference_041818.aux
@@ -127,6 +130,7 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
 OUTPUT conference_041818.dvi
+<<<<<<< HEAD
 INPUT img/example001.pdf
 INPUT extractbb -O img/example001.pdf
 INPUT img/explainofMS.pdf
@@ -137,6 +141,16 @@ INPUT img/frame2010-2018.pdf
 INPUT extractbb -O img/frame2010-2018.pdf
 INPUT img/averageAFST.pdf
 INPUT extractbb -O img/averageAFST.pdf
+=======
+INPUT img/examplegraph1.eps
+INPUT img/examplegraph1.eps
+INPUT img/frame2010net.eps
+INPUT img/frame2010net.eps
+INPUT img/Lang2017.eps
+INPUT img/Lang2017.eps
+INPUT img/LanguageASFT.eps
+INPUT img/LanguageASFT.eps
+>>>>>>> d3de3e9da9d2cd845e0a83d64eba9028c9dfa1f4
 INPUT conference_041818.bbl
 INPUT conference_041818.bbl
 INPUT conference_041818.aux
