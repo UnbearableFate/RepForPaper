@@ -44,8 +44,8 @@
 
 
 \begin{abstract}
-Stack Overflow (SO)~\cite{nasehi2012makes} is one of the most popular question and answer website among software developers. There are many tags in Stack Overflow.  If you ask about Python and tag that post with ``Python'', people interested in Python can follow that tag and see your post. Many questions and answers are received every day for Stack Overflow. We explored how their interest shifted from how they use tags. We classified tags into four types: (1) attractive, (2) stagnant, (3) fluctuating, and (4) terminal based on magnet values and sticky values. We analyze the data from table ``Posts'' which includes about 42 million posts from Stack overflow and table ``Users'' where there are about 9 million rows of user information~\cite{baltes2018sotorrent}. Analysis of stack overflow revealed that: 
-(1) There were some historical events in IT  such as the launch of new tools and the termination of services when there were characteristics in the transition of magnet value and sticky value.
+Stack Overflow (SO) is one of the most popular question and answer websites among software developers. SO stores posts with tags that indicate the keyword that categories the question. For example, if a developer asks about Python and puts ``Python'' tag on the post, the developers who are interested in Python can easily find and answer the post. SO has started its service since 2008 and is still becoming popular. Therefore, we explore how developers' interest shift by analyzing how they use tags. We classify tags into four types: (1) attractive, (2) stagnant, (3) fluctuating, and (4) terminal based on magnet values and sticky values. We analyze the data from table ``Posts'' which includes about 42 million posts from Stack overflow and table ``Users'' where there are about 9 million rows of user information. Results reveal that: 
+(1) There were some historical events in IT such as the launch of new tools and the termination of services when there were characteristics in the transition of magnet value and sticky value.
 (2) The types of tags that are classified do not change much.
 \end{abstract}
 
@@ -57,22 +57,19 @@ magnet, sticky, tag, user migration, OSS census
 
 %1
 \section{Introduction}
-Pew Research Center~\cite{communityeconomic}, an organization that studies problems in the United States and the world, investigated society and population using US tax survey data.  States that have a high percentage of people migrating from the outside are defined as \emph{magnet states} and states where the high proportion of the population who continues to live in the same state since birth are defined as \emph{sticky states}. For example, 86\% of Nevada's population migrated from other states so Nevada state is quite \emph{magnet}. Through such a survey, you can find the tendency how American citizens move.
+Pew Research Center~\cite{communityeconomic}, an organization that studies problems in the United States and the world, investigated society and population using US tax survey data.  States that have a high percentage of people migrating from the outside are defined as \emph{magnet states} and states where the high proportion of the population who continues to live in the same state since birth are defined as \emph{sticky states}. For example, 86\% of Nevada's population migrated from other states so Nevada state is quite \emph{magnet}. Through such a survey, we can find the tendency how American citizens move.
 
-\smallskip
-For many developers, it is important to know the changes in the interests of other developers because popularity among many people should have advantages. Developers always want to work with convenient and easy-to-use tools. To make a project better, excellent developers need to be interested in the project over the long term.\\
+For software developers, it is important to know the changes in the interests of other developers because popularity among many developers should have advantages. Developers always want to work with convenient and easy-to-use tools. To make a project better, excellent developers need to be interested in the project over the long term.
 
-According to the definition of magnet and sticky to be defined later, we classified tags used for stack overflow into magnet tags and sticky tags. In addition, we define strong magnetic and strong sticky \emph{attractive}, strong magnet weak sticky \emph{stagnant}, weak magnet strong sticky \emph{fluctuating}, weak magnet defines a weak sticky \emph{terminal}. By classifying like this, we analyzed what we know from the popularity of tags. We examined tags' magnets and sticky values by classifying them as the tags \emph{programming language}, \emph{framework}, and \emph{environment}. We also compared the news and history of software companies and web services, if there are characteristic changes in magnet values and sticky values, we examined why it was like that. We addressed the following two research questions:
-\par
-\smallskip
+TODO: 山下研究
+
+We classified tags used for stack overflow into magnet tags and sticky tags. In addition, we define strong magnetic and strong sticky \emph{attractive}, strong magnet weak sticky \emph{stagnant}, weak magnet strong sticky \emph{fluctuating}, weak magnet defines a weak sticky \emph{terminal}. By classifying like this, we analyzed what we know from the popularity of tags. We examined tags' magnets and sticky values by classifying them as the tags \emph{programming language}, \emph{framework}, and \emph{environment}. We also compared the news and history of software companies and web services, if there are characteristic changes in magnet values and sticky values, we examined why it was like that. We addressed the following two research questions:
 
 \textbf{(RQ1) What are typical values of magnet and sticky in Stack Overflow?}\par
 In many cases, the sticky value tended to be higher than the magnet value. In addition, the decrease rate was higher for the magnet value than for the sticky value. If it is easy to use and convenient like the .NET Framework, the magnet value and the sticky value are high.
-\smallskip
 
 \textbf{(RQ2) How do magnet and sticky values change over time?}\par
 We can identify which tags are obsolete. When the tags move quadrant, we find that something happens.
-
 
 
 \section{definition of magnet and sticky}
