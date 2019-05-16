@@ -61,70 +61,65 @@ Pew Research Center~\cite{communityeconomic}, an organization that studies probl
 
 For software developers, it is important to know the changes in the interests of other developers because popularity among many developers should have advantages. Developers always want to work with convenient and easy-to-use tools. To make a project better, excellent developers need to be interested in the project over the long term.
 
-TODO: 山下研究
+Therefore, in this study, we focus on new and existing interests in StackOverflow. Inspired by previous studies~\cite{yamashita2016magnet}, we apply Magnet and Sticky metrics to the tags that are collected in StackOverflow. We define strong magnetic and strong sticky \emph{attractive}, strong magnet weak sticky \emph{stagnant}, weak magnet strong sticky \emph{fluctuating}, weak magnet defines a weak sticky \emph{terminal}. By classifying like this, we analyzed what we know from the popularity of tags. We examined tags' magnets and sticky values by classifying them as the tags \emph{programming language}, \emph{framework}, and \emph{environment}. We also compared the news and history of software companies and web services, if there are characteristic changes in magnet values and sticky values, we examined why it was like that. We addressed the following two research questions:
 
-We classified tags used for stack overflow into magnet tags and sticky tags. In addition, we define strong magnetic and strong sticky \emph{attractive}, strong magnet weak sticky \emph{stagnant}, weak magnet strong sticky \emph{fluctuating}, weak magnet defines a weak sticky \emph{terminal}. By classifying like this, we analyzed what we know from the popularity of tags. We examined tags' magnets and sticky values by classifying them as the tags \emph{programming language}, \emph{framework}, and \emph{environment}. We also compared the news and history of software companies and web services, if there are characteristic changes in magnet values and sticky values, we examined why it was like that. We addressed the following two research questions:
-
-\textbf{(RQ1) What are typical values of magnet and sticky in Stack Overflow?}\par
+\noindent \textbf{(RQ1) What are typical values of magnet and sticky in Stack Overflow?}\par
 In many cases, the sticky value tended to be higher than the magnet value. In addition, the decrease rate was higher for the magnet value than for the sticky value. If it is easy to use and convenient like the .NET Framework, the magnet value and the sticky value are high.
 
-\textbf{(RQ2) How do magnet and sticky values change over time?}\par
+\noindent \textbf{(RQ2) How do magnet and sticky values change over time?}\par
 We can identify which tags are obsolete. When the tags move quadrant, we find that something happens.
 
 
-\section{definition of magnet and sticky}
+\section{Definition of Magnet and Sticky}
 This section describes how we measure the appeal and adhesion of users on different topics on Stack Overflow in this study, we use the Magnet and Sticky metrics defined by the Pew Research Center for illustrating the migratory trends of citizens in the United States.
 
 The Pew Research Center report defines magnet states as those states where a large proportion of adults who live there have moved from another state. Thus, the magnet metric for a state is the proportion of adult residents of a state who were not born in the state. Furthermore, the report also defines sticky states as those states where a large proportion of adults who were born there continue to live there. Thus, the sticky metric for a state is the proportion of adult residents who were born in the state
 
 These definitions are sound for a study of populations, where a single adult can only occupy one state at a time. However, the definition cannot be applied directly to the topics discussed by the users of Stack Overflow where a user can ask or answer questions on several topics at the same time. Therefore, we expand new definition to apply to topics in Stack Overflow as follows:
 
-\smallskip
 \subsection*{\textit{\textbf{Magnet and Sticky in Stack Overflow}}}
 
 Questions in Stack Overflow are composed of the content of the question, answers to the questions and comments~\cite{liu2018mining}, that are call Posts in the database of SOTorrent. Each question has one or more tags that separate the question into different topics. Simultaneously, posts in a question have their own creator (for the question content, one is the questioner, and for the answer, one is the respondent) who is a participant of the topics of the question. We also define the activity of asking or answering questions on some topic as a discussion of the topic. For example, a classical question in Stack overflow has three tags like java, apache, and Linux which is asked by user A and answered by user B, and C, so A, and C are participants of topic java, apache, and Linux.
 
-\smallskip
 \noindent
-\textbf{Magnet}
-Magnet topics are those that attract a large proportion of new users. Thus, we calculate the magnetism of a topic as the proportion of users who ask or answer during the time period under research to all new users who registered their account at the year.
+\textbf{Magnet.} Magnet topics are those that attract a large proportion of new users. Thus, we calculate the magnetism of a topic as the proportion of users who ask or answer during the time period under research to all new users who registered their account at the year.
 
-\smallskip
 \noindent
-\textbf{Sticky}
-Sticky topics are those where a large proportion of the users will keep participating in the discussion in the time period under research and the following. Thus, we calculate the stickiness of a topic as the proportion of the users who discuss within the topic in the time period under research to who have also discussed in the following time period.
+\textbf{Sticky.} Sticky topics are those where a large proportion of the users will keep participating in the discussion in the time period under research and the following. Thus, we calculate the stickiness of a topic as the proportion of the users who discuss within the topic in the time period under research to who have also discussed in the following time period.
 
-\smallskip
 \noindent
-\textbf{Example}
-Let us explain how we calculate magnet and stick values for some topics belong to a major category as an example. There are 6 questions (a, b, c, d, e, f) and 7 users (A, B, C, D, E, F, G), the Last Activity Date of question a, b, c is during 2017 and question d, e, f is during 2018. The registration date of user A, B, C, D is during 2017 and the registration date of user E, F, G is during 2018~\cite{yamashita2016magnet}.
+\textbf{Example (Calculating magnet and sticky values.}
+Let us explain how we calculate magnet and sticky values for some topics belong to a major category as an example. There are 6 questions (a, b, c, d, e, f) and 7 users (A, B, C, D, E, F, G), the Last Activity Date of question a, b, c is during 2017 and question d, e, f is during 2018. The registration date of user A, B, C, D is during 2017 and the registration date of user E, F, G is during 2018~\cite{yamashita2016magnet}.
 
 \begin{figure}[t]
  \centering
- \includegraphics[width=1.0\hsize]{img/example001.eps}  
- \caption{Example of the merge of tags belonging to analogous subjects} 
- \label{fig:example1} 
-\end{figure}
-\smallskip
-
-\begin{figure}[t]
- \centering
- \includegraphics[width=.9\hsize]{img/explainofMS.eps}  
+ \includegraphics[width=.75\hsize]{img/explainofMS.eps}  
  \caption{Example of Magnet and Sticky values definition} 
  \label{fig:example2} 
 \end{figure}
-\smallskip
+
 
 To calculate the magnet metric, we observe that there are four new users who register his/her account in 2017 (A, B, C, and D), and all of them discuss in topic 1, while two of them (B, C) participate in the discussion of topic 2 and 3. In this case, Magnet value of topic 1 in 2017 is 4/4, topic 2 is 2/4 and topic 3 is 2/4.
 
 To calculate the sticky metric, on topic 1, there are three users participate in the discussion in 2017 (A, B and C) but only one of them also participate in the discussion in 2018 (A). Hence, the sticky value of project 1 is 1/4. on topic 2, there are 2 users participate in the discussion in 2017 (B and C) but only one of them also participate in the discussion in 2018 (B). Even though new users E F G participate in the discussion in 2018, we still calculate the value of sticky as 1/2. For the same reason, the sticky of topic 3 is 2/2 in 2018.\\
 
-We merge tags belonging to analogous subjects into one topic,for example tag ``python-2.7'' and tag ``python-3.6'' are merged into topic ``python''. So we get 3 topics in this case. 
-Of course different version number suffixes are the most common examples of analogous tags. In our observations, analogous tags that also need to be merged include derivatives of the same technology on different platforms, special tools in a certain tool family, or a combination of a technology with its commonly used library, etc. For example, tag ``reactjs'', ``react-router'', ``reactjs-flux'', ``create-react-app'' should be merged into one topic ``react''.
+\noindent
+\textbf{Example (Merging similar subjects into one topic.}
+We merge subjects (i.e., tags) belonging to analogous subjects into one topic. For example, we consider that different version number suffixes (e.g., ``python-2.7'' and tag ``python-3.6'') are one of the common examples of analogous tags. 
+
+\begin{figure}[t]
+ \centering
+ \includegraphics[width=0.80\hsize]{img/example001.eps}  
+ \caption{Example of the merge of tags belonging to analogous subjects} 
+ \label{fig:example1} 
+\end{figure}
+
+
+We also consider that we need merge include derivatives of the same technology on different platforms, special tools in a certain tool family, or a combination of a technology with its commonly used library, etc. For example, tag ``reactjs'', ``react-router'', ``reactjs-flux'', ``create-react-app'' should be merged into one topic ``react''.
 % Of course, the difference in version number is the most common example of analogous tags. The rest of examples includes derivatives of the technology on different platforms, commonly used libraries, or specific tools in a tool family, etc. for example topic ``react'' includes tag ``reactjs'', ``react-router'', ``reactjs-flux'', ``create-react-app'' etc. 
 We can get this information from the ``Related Tag'' column of the ``Tag Info'' on Stack Overflow.''
 
-In our exmaple which is presented in Figure~\ref{fig:example1} and Figure~\ref{fig:example2},  question a has tag 1.0, question b has tag 1.1 and question f has tag 1.2 , which means according to our merge rule, they all belong to topic 1.  Simultaneously, question c has tag 2.0 and tag 3.1, which means it belongs to topic 2 and 3 at the same time. Therefore, queston d belongs to topic 2 and question e belongs to topic 3.
+Figure~\ref{fig:example1} shows that question a has tag 1.0, question b has tag 1.1 and question f has tag 1.2 , which means according to our merge rule, they all belong to topic 1.  Simultaneously, question c has tag 2.0 and tag 3.1, which means it belongs to topic 2 and 3 at the same time. Therefore, queston d belongs to topic 2 and question e belongs to topic 3.
 
 
 \begin{figure*}[t]
@@ -140,13 +135,11 @@ In our exmaple which is presented in Figure~\ref{fig:example1} and Figure~\ref{f
 
 
 \section{Dataset}
-In this paper, we analyze the Stack Overflow dataset provided by Sebastian Baltes et al~\cite{msr2019challenge} called SOTorrent. 
-
-SOTorrent is “an open dataset based on the official SO data dump. SOTorrent provides access to the version history of SO content at the level of whole posts and individual text or code blocks.
+In this paper, we analyze the Stack Overflow dataset (SOTorrent) provided by Sebastian Baltes et al.~\cite{msr2019challenge}. SOTorrent is an open dataset based on the official SO data dump. SOTorrent provides access to the version history of SO content at the level of whole posts and individual text or code blocks.
 
 The dataset includes 20 different tables which store not only data from official SO data dump but also data extracted from the original official SO data dump.
 
-In this paper, we only analyze the data from table \emph{Posts} which includes about 42 million posts from Stack overflow and table \emph{Users} where there are about 9 million rows of user information from July 2008 to September 2018 and we pay attention to users, tags, and time information of questions.
+In this paper, we only analyze the data from table \emph{Posts} which includes about 42 million posts from Stack overflow and table \emph{Users} where there are about 9 million rows of user information from July 2008 to September 2018. We focus on  users, tags, and time information of questions.
 
 In this paper, we consider a user to be one who asks or answers questions in Stack Overflow. Those who comment or like/unlike on questions or answers are not counted in the statistics.
 
