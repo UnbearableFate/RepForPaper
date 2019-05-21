@@ -1,4 +1,18 @@
 # Fdb version 3
+<<<<<<< HEAD
+["bibtex conference_041818"] 1556096283 "conference_041818.aux" "conference_041818.bbl" "conference_041818" 1556099831
+  "/usr/local/texlive/2017/texmf-dist/bibtex/bst/IEEEtran/IEEEtran.bst" 1480098433 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
+  "conference_041818.aux" 1556099831 1625 103f215c6f891e809c87881257e8fb8f ""
+  "mining.bib" 1549391339 8052 e71b317096914709e765ecb6812973e3 ""
+  (generated)
+  "conference_041818.blg"
+  "conference_041818.bbl"
+["dvipdf"] 1556099831 "conference_041818.dvi" "conference_041818.pdf" "conference_041818" 1556099831
+  "conference_041818.dvi" 1556099831 28844 79fcaa509b3f55ece47ad255bccf11c2 "latex"
+  (generated)
+  "conference_041818.pdf"
+["latex"] 1556099829 "conference_041818.tex" "conference_041818.dvi" "conference_041818" 1556099831
+=======
 ["bibtex conference_041818"] 1549220297 "conference_041818.aux" "conference_041818.bbl" "conference_041818" 1549220298
   "/usr/local/texlive/2017/texmf-dist/bibtex/bst/IEEEtran/IEEEtran.bst" 1480098433 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
   "conference_041818.aux" 1549220297 1087 2e865df9271e3ec852d9e90905c8154d ""
@@ -11,6 +25,7 @@
   (generated)
   "conference_041818.pdf"
 ["latex"] 1549220297 "conference_041818.tex" "conference_041818.dvi" "conference_041818" 1549220298
+>>>>>>> d3de3e9da9d2cd845e0a83d64eba9028c9dfa1f4
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1480098689 2172 fd0c924230362ff848a33632ed45dc23 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmbi7t.tfm" 1480098689 2228 e564491c42a4540b5ebb710a75ff306c ""
@@ -41,7 +56,14 @@
   "/usr/local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty" 1492297155 16154 f2c73e20ca771d534a8516c62c6b0eae ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd" 1480098821 2217 d274654bda1292013bdf48d5f720a495 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.def" 1480098821 7767 aa88823823f5e767d79ea1166ab1ae74 ""
+<<<<<<< HEAD
+  "/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty" 1480098823 66233 8b81cfab95a1f8fc2f0f6c89415b087a ""
+  "/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty" 1480098823 64866 1ea74c5f2d1685881497f021b8f186b2 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/cite/cite.sty" 1480098825 26218 19edeff8cdc2bcb704e8051dc55eb5a7 ""
+  "/usr/local/texlive/2017/texmf-dist/tex/latex/framed/framed.sty" 1480098829 22449 7ec15c16d0d66790f28e90343c5434a3 ""
+=======
+  "/usr/local/texlive/2017/texmf-dist/tex/latex/cite/cite.sty" 1480098825 26218 19edeff8cdc2bcb704e8051dc55eb5a7 ""
+>>>>>>> d3de3e9da9d2cd845e0a83d64eba9028c9dfa1f4
   "/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1480098830 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1480098830 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/dvipdfmx.def" 1485129666 14059 27762479eb34c2b0599e56919a2e34f6 ""
@@ -55,6 +77,24 @@
   "/usr/local/texlive/2017/texmf-var/web2c/eptex/platex.fmt" 1546925694 4345395 0c49284fa5bf4f012fb641c9c53fbd36 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
   "IEEEtran.cls" 1440654524 288304 b67b6fc6c2abb39f9b461923f5199343 ""
+<<<<<<< HEAD
+  "conference_041818.aux" 1556099831 1625 103f215c6f891e809c87881257e8fb8f ""
+  "conference_041818.bbl" 1556096283 1920 ba711bb4c59734bddca4517a7f1bbf29 "bibtex conference_041818"
+  "conference_041818.tex" 1556099827 33480 91a9555936a20e84b432a439a1d2d24c ""
+  "extractbb -O img/2010all.pdf" 0 -1 0 ""
+  "extractbb -O img/averageAFST.pdf" 0 -1 0 ""
+  "extractbb -O img/example001.pdf" 0 -1 0 ""
+  "extractbb -O img/explainofMS.pdf" 0 -1 0 ""
+  "extractbb -O img/frame2010-2018.pdf" 0 -1 0 ""
+  "img/2010all.pdf" 1549377849 72718 357518fc6a3b07b096feb5b1f7f60574 ""
+  "img/averageAFST.pdf" 1556098489 11980 4a63b5fda6f2d75e1d3a177ba3a5b61b ""
+  "img/example001.pdf" 1555577143 19833 3a49943c3cf8b6b4d5d570c916a36e90 ""
+  "img/explainofMS.pdf" 1555488868 10171 04623cce3aa1bf0ce157fdf4acc01600 ""
+  "img/frame2010-2018.pdf" 1556099707 25985 32e82c4fe637282321fa11f97157b5eb ""
+  (generated)
+  "conference_041818.dvi"
+  "conference_041818.aux"
+=======
   "conference_041818.aux" 1549220297 1087 2e865df9271e3ec852d9e90905c8154d ""
   "conference_041818.bbl" 1549220297 1098 b910b95bec70f47b09c73474a2707134 "bibtex conference_041818"
   "conference_041818.tex" 1549220284 22112 bb4707d1f71a40cbd8973686215942ca ""
@@ -65,4 +105,5 @@
   (generated)
   "conference_041818.aux"
   "conference_041818.dvi"
+>>>>>>> d3de3e9da9d2cd845e0a83d64eba9028c9dfa1f4
   "conference_041818.log"
